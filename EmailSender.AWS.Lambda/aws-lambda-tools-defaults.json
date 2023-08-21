@@ -1,0 +1,34 @@
+
+{
+    "Information" : [
+        "This file provides default values for the deployment wizard inside Visual Studio and the AWS Lambda commands added to the .NET Core CLI.",
+        "To learn more about the Lambda commands with the .NET Core CLI execute the following command at the command line in the project root directory.",
+        "dotnet lambda help",
+        "All the command line options for the Lambda command can be specified in this file."
+    ],
+    "profile"     : "default",
+    "region"      : "sa-east-1",
+    "configuration" : "Release",
+    "function-architecture" : "x86_64",
+    "function-runtime"      : "dotnet6",
+    "Environment"           : {
+        "Variables" : {
+            "EmailSender" : "",
+            "EmailPassword" : "",
+            "Smtp"          : "",
+            "SmtpPort"      : ""
+        }
+    },
+    "function-memory-size"  : 256,
+    "function-timeout"      : 30,
+    "function-handler"      : "EmailSender.AWS.Lambda::EmailSender.AWS.Lambda.Function::Handler",
+    "framework"             : "net6.0",
+    "function-name"         : "EmailSender",
+    "function-description"  : "Send email with .NET 6.0",
+    "package-type"          : "Zip",
+    "function-role"         : "arn:aws:iam::546732575888:role/service-role/email_sender-role-6wu5qbhz",
+    "function-subnets"      : "",
+    "function-security-groups" : "",
+    "tracing-mode"             : "PassThrough",
+    "image-tag"                : ""
+}
